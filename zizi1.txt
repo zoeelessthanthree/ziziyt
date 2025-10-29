@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>zozo's corner <33</title>
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+background: linear-gradient(180deg, #ffeaf4, #ffd9e6);
+font-family: 'Quicksand', sans-serif;
+color: #5b4a4a;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
+flex-direction: column;
+}
+
+.card {
+background: #fffafc;
+border-radius: 25px;
+box-shadow: 0 4px 30px rgba(255, 182, 193, 0.4);
+padding: 40px 50px;
+text-align: center;
+width: 330px;
+position: relative;
+z-index: 1;
+}
+
+h1 {
+font-family: 'Gochi Hand', cursive;
+color: #ff94b8;
+font-size: 2.2em;
+margin-bottom: 15px;
+white-space: nowrap;
+overflow: hidden;
+border-right: 3px solid #ff94b8;
+width: 0;
+animation: typing 2.5s steps(15, end) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+from { width: 0; }
+to { width: 100%; }
+}
+
+@keyframes blink {
+50% { border-color: transparent; }
+}
+
+p {
+font-size: 1em;
+line-height: 1.5em;
+margin-top: 5px;
+}
+
+.links a {
+display: inline-block;
+margin: 8px;
+padding: 8px 15px;
+background: #ffd9e6;
+color: #5b4a4a;
+border-radius: 20px;
+text-decoration: none;
+font-family: 'Gochi Hand', cursive;
+transition: 0.3s;
+}
+
+.links a:hover {
+background: #ffc1d6;
+transform: scale(1.05);
+}
+
+.heart {
+position: absolute;
+color: #ffb6c1;
+font-size: 16px;
+animation: float 6s ease-in infinite;
+opacity: 0.7;
+}
+
+@keyframes float {
+0% {
+transform: translateY(0) scale(1);
+opacity: 1;
+}
+100% {
+transform: translateY(-600px) scale(0.7);
+opacity: 0;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+<h1>zozo <33</h1>
+<p>hii im zozo (•˕ •マ.ᐟ i luv soft things, cats, and pastel skies~ welcome to my lil corner <33</p>
+<div class="links">
+<a href="#">instagram</a>
+<a href="#">aops</a>
+<a href="#">blog</a>
+</div>
+</div>
+
+<script>
+// lil floating hearts
+const body = document.body
+setInterval(() => {
+const heart = document.createElement('div')
+heart.classList.add('heart')
+heart.textContent = '♡'
+heart.style.left = Math.random() * 100 + 'vw'
+heart.style.animationDuration = 4 + Math.random() * 3 + 's'
+body.appendChild(heart)
+setTimeout(() => heart.remove(), 6000)
+}, 600)
+</script>
+</body>
+</html>
